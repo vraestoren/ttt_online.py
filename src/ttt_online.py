@@ -1,7 +1,7 @@
 from time import time
 from requests import Session
 
-class TTTOnline:
+class TttOnline:
     def __init__(self) -> None:
         self.api = "https://keralamedia.online/crisscross"
         self.session = Session()
