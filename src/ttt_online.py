@@ -11,7 +11,7 @@ class TttOnline:
 		}
 		self.player_id = None
 
-	def _get(self, endpoint: str, params: dict = {}) -> dict:
+	def _get(self, endpoint: str, params: dict = {}) -> None:
 		return self.session.get(
 			f"{self.api}{endpoint}", params=params)
 
