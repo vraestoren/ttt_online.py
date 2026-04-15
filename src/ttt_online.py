@@ -1,5 +1,5 @@
 from time import time
-from requests import Session
+from requests import Session, Response
 
 class TttOnline:
 	def __init__(self) -> None:
@@ -11,7 +11,7 @@ class TttOnline:
 		}
 		self.player_id = None
 
-	def _get(self, endpoint: str, params: dict = {}) -> None:
+	def _get(self, endpoint: str, params: dict = {}) -> Response:
 		return self.session.get(
 			f"{self.api}{endpoint}", params=params)
 
